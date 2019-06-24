@@ -1,11 +1,11 @@
 sudo: required
+language: node_js
+node_js:
+  - "10.16.0-alpine"
+dist: trusty
 services:
   - docker
-
 install:
   - docker-compose build
   - docker-compose up -d
   - docker ps -a
-
-notifications:
-  email: false
