@@ -1,0 +1,9 @@
+/* eslint-disable no-undef */
+// eslint-disable-next-line prefer-destructuring
+const expect = require('chai').expect;
+
+describe('test', () => {
+  it('should return a string', () => {
+    expect('ci with travis').to.equal('ci with travis');
+  });
+});

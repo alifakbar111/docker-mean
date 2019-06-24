@@ -5,7 +5,8 @@ node_js:
 dist: trusty
 services:
   - docker
-install:
+script:
   - docker-compose build
   - docker-compose up -d
+after_script:
   - docker ps -a

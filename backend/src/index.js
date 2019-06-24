@@ -22,6 +22,8 @@ mongoose.connection.on('error', (err) => {
 
 require('./user/user.model');
 
-app.listen(config.PORT, () => {
+const server = app.listen(config.PORT, () => {
   Object.keys(config).forEach((key) => winston.info(`${key}: ${config[key]}`));
 });
+
+module.exports = server;
